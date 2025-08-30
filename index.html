@@ -207,7 +207,40 @@
   font-family: 'Lobster', cursive;
   text-shadow: 2px 2px 6px black;
 }
+  /* Estilo para los botones de YouTube */
+.youtube-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  text-decoration: none;
+  font-weight: bold;
+  font-family: Arial, sans-serif;
+  font-size: 14px;
+  line-height: 1;
+  border-radius: 6px;
+  padding: 6px 10px;
+  background-color: #FF6347;
+  color: #fff;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+  flex-wrap: nowrap; /* Asegura que el texto se muestre junto al icono */
+}
 
+/* Estilo para los botones cuando se visualizan en pantallas pequeñas (vertical) */
+@media screen and (max-width: 600px) {
+  .youtube-btn {
+    flex-wrap: wrap; /* Permite que el texto se muestre debajo del icono */
+    justify-content: center; /* Centra el contenido del botón */
+    padding: 8px 12px; /* Aumenta el espacio del botón para hacerlo más visible */
+  }
+  
+  .youtube-btn span {
+    font-size: 1rem; /* Asegura que el texto sea más grande en pantallas pequeñas */
+  }
+
+  .youtube-btn i {
+    font-size: 18px; /* Aumenta el tamaño del icono */
+  }
+}
   </style>
 </head>
 <body>
