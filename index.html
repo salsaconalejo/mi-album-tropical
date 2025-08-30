@@ -219,8 +219,58 @@
   font-family: 'Lobster', cursive;
   text-shadow: 2px 2px 6px black;
 }
+/* ==== BOTÓN YOUTUBE BASE ==== */
+.youtube-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  text-decoration: none;
+  font-weight: bold;
+  font-family: Arial, sans-serif;
+  font-size: 12px;
+  border-radius: 6px;
+  padding: 6px 10px;
+  background-color: #e50914; /* rojo fuerte */
+  color: #fff;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+  justify-content: center;
+}
 
-  </style>
+.youtube-btn i {
+  color: white;
+  font-size: 18px;
+  transform: translateY(1px);
+}
+
+/* ===== MODO VERTICAL (móvil pequeño) SOLO ICONO ===== */
+@media (max-width: 600px) {
+  .youtube-btn {
+    padding: 6px;          /* botón cuadrado más pequeño */
+    width: 36px;
+    height: 36px;
+    font-size: 0;          /* oculta texto */
+    gap: 0;
+  }
+  .youtube-btn .you,
+  .youtube-btn .tube {
+    display: none;         /* oculta palabra YouTube */
+  }
+}
+
+/* ===== MODO HORIZONTAL O PC ===== */
+@media (min-width: 601px) {
+  .youtube-btn {
+    width: auto;           /* ancho automático para incluir texto */
+    padding: 6px 10px;
+    font-size: 12px;
+    gap: 6px;
+  }
+  .youtube-btn .you,
+  .youtube-btn .tube {
+    display: inline;       /* muestra la palabra YouTube */
+  }
+}
+      </style>
 </head>
 <body>
   <div class="container">
