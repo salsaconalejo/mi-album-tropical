@@ -29,23 +29,18 @@
       padding: 20px;
     }
 
-    /* Encabezado */
-    .encabezado-musical {
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      justify-content: center;
-    }
-
+    /* Imagen de palmera ajustada */
     .encabezado-musical img {
       width: 100%;
       height: auto;
-      object-fit: cover;  /* Asegura que la imagen se ajuste correctamente */
-      border-radius: 10px 10px 0 0; /* Bordes redondeados */
+      display: block;
+      border-radius: 10px 10px 0 0; 
+      object-fit: cover; 
+      margin-top: -60px; /* Subir la imagen */
     }
 
     /* Estilo para el encabezado y el texto */
-    .titulo-principal {
+    .encabezado-musical h1 {
       color: gold;
       font-size: 2.5rem;
       margin: 10px 0;
@@ -102,7 +97,7 @@
     table th:nth-child(2), table td:nth-child(2) { width: 40%; }
     table th:nth-child(3), table td:nth-child(3) { width: 20%; white-space: nowrap; }
 
-    /* Botón YouTube */
+    /* Botón YouTube más pequeño y rojo */
     .youtube-btn {
       display: inline-flex;
       align-items: center;
@@ -110,11 +105,11 @@
       text-decoration: none;
       font-weight: bold;
       font-family: Arial, sans-serif;
-      font-size: 14px;
+      font-size: 12px;  /* Reducir tamaño */
       line-height: 1;
       border-radius: 6px;
-      padding: 6px 10px;
-      background-color: #FF6347;
+      padding: 4px 6px;  /* Reducir tamaño del botón */
+      background-color: #d32f2f;  /* Más rojo */
       color: #fff;
       box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
     }
@@ -160,6 +155,12 @@
       100% { transform: translateY(0) scale(1); }
     }
 
+    /* Palmera icono */
+    .palmera {
+      font-size: 2.5rem;
+      color: #ff6347;
+    }
+
     /* Responsive */
     @media screen and (max-width: 600px) {
       table { table-layout: fixed; width: 100%; }
@@ -174,22 +175,48 @@
       .titulo-principal { font-size: 1.6rem; gap: 6px; padding: 8px 12px; flex-wrap: nowrap; }
     }
 
-    /* Solo ícono en el botón YouTube (móvil) */
-    @media (max-width: 600px) {
-      .youtube-btn {
-        gap: 0;
-        padding: 6px;           /* área táctil más cómoda */
-        width: 36px;            /* tamaño estable */
-        height: 36px;
-        border-radius: 6px;
-        font-size: 0;           /* oculta texto residual */
-        justify-content: center;
-      }
-      .youtube-btn .you,
-      .youtube-btn .tube { display: none; }  /* oculta “You/Tube” */
-      .youtube-btn i { font-size: 18px; transform: translateY(1px); }
+    .contador-arriba {
+      text-align: right;
+      font-family: 'Lobster', cursive;
+      font-size: 1.2rem;
+      font-weight: bold;
+      color: #ffb84d;
+      margin-bottom: .3rem;
+      margin-right: .5rem;
     }
+    body {
+  background: linear-gradient(45deg, #FF7F00, #FF4500, #FF6347), url('palmeras.jpg');
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  color: #f5f5f5;
+  font-family: 'Roboto', sans-serif;
+  text-align: center;
+  margin: 0;
+  padding: 0;
+}
 
+.encabezado-musical img {
+  width: 100%;
+  height: auto;
+  display: block;
+  border-radius: 10px 10px 0 0; /* Bordes redondeados para las esquinas superiores */
+  object-fit: cover; /* Asegura que la imagen se ajuste a su contenedor sin deformarse */
+}
+
+.container {
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+.titulo-principal {
+  color: gold;
+  font-size: 2.5rem;
+  margin: 10px 0;
+  font-family: 'Lobster', cursive;
+  text-shadow: 2px 2px 6px black;
+}
   </style>
 </head>
 <body>
@@ -267,4 +294,5 @@
     </div>
   </div>
 </body>
-</html>
+</html> 
+
