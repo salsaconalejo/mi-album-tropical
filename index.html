@@ -294,9 +294,9 @@
         <span class="texto">Música Tropical</span>
       </div>
 
-      <div class="contador-arriba">
-        <span class="contador-canciones" style="font-size:1rem; margin-left:auto; color:#000;"></span>
-      </div>    
+     <div class="contador-arriba">
+        <span class="contador-canciones"></span>
+      </div>  
 
       <div class="table-wrapper">
         <table id="tabla-salsa">
@@ -442,6 +442,16 @@
               </td>
             </tr>
             <tr>
+              <td>La Gran Manzana</td>
+              <td>Frenesi de Merengue</td>
+              <td>
+                <a class="youtube-btn" href="https://www.youtube.com/watch?v=T5RU_Ao5CKw&list=RDT5RU_Ao5CKw&start_radio=1&ab_channel=DiscosFuentesEdimusica"_blank">
+                  <i class="fab fa-youtube"></i>
+                  <span class="you">You</span><span class="tube">Tube</span>
+                </a>
+              </td>
+            </tr>
+            <tr>
               <td>Loquito Por Ti</td>
               <td>Armando Hernandez</td>
               <td>
@@ -512,6 +522,16 @@
               </td>
             </tr>
             <tr>
+              <td>Esa Morena</td>
+              <td>Los Hermanos Rosario</td>
+              <td>
+                <a class="youtube-btn" href="https://www.youtube.com/watch?v=NpNZQexDpGA&list=RDNpNZQexDpGA&start_radio=1&ab_channel=KarenRecords" target="_blank">
+                  <i class="fab fa-youtube"></i>
+                  <span class="you">You</span><span class="tube">Tube</span>
+                </a>
+              </td>
+            </tr>
+            <tr>
               <td>La Bocina</td>
               <td>Jaime Ley</td>
               <td>
@@ -571,6 +591,36 @@
                 </a>
               </td>
             </tr>
+             <tr>
+              <td>Baion de Madrid</td>
+              <td>Pastor López</td>
+              <td>
+                <a class="youtube-btn" href="https://www.youtube.com/watch?v=WagkSkVrICM&list=RDWagkSkVrICM&start_radio=1&ab_channel=DiscosFuentesEdimusica" target="_blank">
+                  <i class="fab fa-youtube"></i>
+                  <span class="you">You</span><span class="tube">Tube</span>
+                </a>
+              </td>
+            </tr>
+             <tr>
+              <td>Enamorado</td>
+              <td>Rodolfo Aicardi y Los Hispanos</td>
+              <td>
+                <a class="youtube-btn" href="https://www.youtube.com/watch?v=N0O6tgOQdYg&list=RDN0O6tgOQdYg&start_radio=1&ab_channel=DiscosFuentesEdimusica" target="_blank">
+                  <i class="fab fa-youtube"></i>
+                  <span class="you">You</span><span class="tube">Tube</span>
+                </a>
+              </td>
+            </tr>
+            <tr>
+              <td>La Cerveza</td>
+              <td>Rodolfo Aicardi y Los Hispanos </td>
+              <td>
+                <a class="youtube-btn" href="https://www.youtube.com/watch?v=7yBXJJomwow&list=RD7yBXJJomwow&start_radio=1&ab_channel=DiscosFuentesEdimusica" target="_blank">
+                  <i class="fab fa-youtube"></i>
+                  <span class="you">You</span><span class="tube">Tube</span>
+                </a>
+              </td>
+            </tr>
           <tr>
               <td>Cumbia de los Locos</td>
               <td>Lisandro Meza</td>
@@ -591,7 +641,17 @@
                 </a>
               </td>
             </tr>
-             <tr>
+            <tr>
+              <td>Mi Vecina</td>
+              <td>Joaquín Bedoya</td>
+              <td>
+                <a class="youtube-btn" href="https://www.youtube.com/watch?v=gq-LOHTU9ts&list=RDgq-LOHTU9ts&start_radio=1&ab_channel=JoaquinBedoya-Topic" target="_blank">
+                  <i class="fab fa-youtube"></i>
+                  <span class="you">You</span><span class="tube">Tube</span>
+                </a>
+              </td>
+            </tr> 
+            <tr>   
               <td>Tihuanaco</td>
               <td>Alfredo Linares</td>
               <td>
@@ -626,6 +686,16 @@
               <td>Oro Solido</td>
               <td>
                 <a class="youtube-btn" href="https://www.youtube.com/watch?v=ZLweuO_uljY&list=RDZLweuO_uljY&start_radio=1&ab_channel=OroSolido-Topic" target="_blank">
+                  <i class="fab fa-youtube"></i>
+                  <span class="you">You</span><span class="tube">Tube</span>
+                </a>
+              </td>
+            </tr>
+            <tr>
+              <td>El Animalito</td>
+              <td>Joaquín Bedoya</td>
+              <td>
+                <a class="youtube-btn" href="https://www.youtube.com/watch?v=e8GLRf8diK4&list=RDe8GLRf8diK4&start_radio=1&ab_channel=JoaquinBedoya-Topic" target="_blank">
                   <i class="fab fa-youtube"></i>
                   <span class="you">You</span><span class="tube">Tube</span>
                 </a>
@@ -896,5 +966,12 @@
       </div>
     </div>
   </div>
+  <script>
+  // Contar las filas dentro de tbody de la tabla
+  const filas = document.querySelectorAll("#tabla-salsa tbody tr").length;
+  
+  // Insertar el número de canciones en el span
+  document.querySelector(".contador-canciones").textContent = filas + " canciones";
+</script>
 </body>
 </html>
