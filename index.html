@@ -5,13 +5,13 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
   <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
-  <link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css2?family=Lobster&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Anton&display=swap" rel="stylesheet">
   <title>🎶 Mi Álbum Tropical 🌴</title>
   <style>
     /* Fondo con imagen de palmeras y color naranja */
     body {
-      background: linear-gradient(45deg, #FF7F00, #FF4500, #FF6347), url('palmerassinfd.png');
+      background: linear-gradient(45deg, #FF7F00, #FF4500, #FF6347), url('palmeras.jpg');
       background-size: cover;
       background-position: center;
       background-attachment: fixed;
@@ -40,25 +40,18 @@
 
     /* Mensaje de bienvenida */
     .bienvenida {
-      font-size: 1.5rem;
+      font-size: 1.4rem;
       color: #fff;
       font-weight: bold;
       margin-top: 20px;
-      animation: fadein 3s ease-in-out infinite alternate, brillo 1.5s infinite;
+      animation: fadein 3s ease-in-out infinite alternate;
       text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.6);
-      font-family: 'Pacifico', cursive;
     }
 
     /* Animación para el mensaje de bienvenida */
     @keyframes fadein {
       0% { opacity: 0; }
       100% { opacity: 1; }
-    }
-
-    @keyframes brillo {
-      0% { text-shadow: 0 0 5px rgba(255, 165, 0, 0.7); }
-      50% { text-shadow: 0 0 20px rgba(255, 165, 0, 1); }
-      100% { text-shadow: 0 0 5px rgba(255, 165, 0, 0.7); }
     }
 
     /* Estilo para la tabla */
@@ -181,6 +174,40 @@
       margin-bottom: .3rem;
       margin-right: .5rem;
     }
+    body {
+  background: linear-gradient(45deg, #FF7F00, #FF4500, #FF6347), url('palmeras.jpg');
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  color: #f5f5f5;
+  font-family: 'Roboto', sans-serif;
+  text-align: center;
+  margin: 0;
+  padding: 0;
+}
+
+.encabezado-musical img {
+  width: 100%;
+  height: auto;
+  display: block;
+  border-radius: 10px 10px 0 0; /* Bordes redondeados para las esquinas superiores */
+  object-fit: cover; /* Asegura que la imagen se ajuste a su contenedor sin deformarse */
+}
+
+.container {
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+.titulo-principal {
+  color: gold;
+  font-size: 2.5rem;
+  margin: 10px 0;
+  font-family: 'Lobster', cursive;
+  text-shadow: 2px 2px 6px black;
+}
+
   </style>
 </head>
 <body>
@@ -258,4 +285,4 @@
     </div>
   </div>
 </body>
-</html>
+</html> 
