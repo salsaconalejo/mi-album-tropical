@@ -9,17 +9,22 @@
   <link href="https://fonts.googleapis.com/css2?family=Anton&display=swap" rel="stylesheet">
   <title>🎶 Mi Álbum Tropical 🌴</title>
   <style>
-    /* Fondo tropical con filtro de color */
+    /* Fondo con gradiente naranja resplandeciente */
     body {
-      background: url('https://www.example.com/tropical-sunset.jpg') no-repeat center center fixed;
-      background-size: cover;
+      background: linear-gradient(45deg, #FF7F00, #FF4500, #FF6347);
+      background-size: 400% 400%;
+      animation: gradientAnimation 5s ease infinite;
       color: white;
       font-family: 'Roboto', sans-serif;
       text-align: center;
       margin: 0;
       padding: 0;
-      /* Aplicamos un filtro de color para suavizar el fondo */
-      filter: brightness(70%) contrast(100%) saturate(150%);
+    }
+
+    @keyframes gradientAnimation {
+      0% { background-position: 100% 50%; }
+      50% { background-position: 0% 50%; }
+      100% { background-position: 100% 50%; }
     }
 
     .container {
