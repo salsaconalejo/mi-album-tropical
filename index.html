@@ -1223,56 +1223,68 @@
   // Insertar el número de canciones en el span
   document.querySelector(".contador-canciones").textContent = filas + " canciones";
 </script>
-            <!-- Pie de página -->
-                   <footer style="background: linear-gradient(90deg, #ff7f00, #d35400, #ff7f00); padding: 25px 15px; margin-top: 40px; color: #fff; text-align:center;">
-              <div style="max-width: 700px; margin: 0 auto;">
-                <h3 style="color: #ffd700; font-size: 1.1rem; margin: 0 0 10px 0;">
-                  <span id="candado" class="candado" style="font-size: 1.6rem;">🔒</span>
-                  Derechos de Autor
-                </h3>
-                <p style="font-size: 0.9rem; line-height: 1.5; margin: 5px 0;">
-                  Este portafolio ha sido desarrollado por <strong>Héctor Alejandro Gaviria Marín</strong> con fines exclusivamente profesionales.
-                </p>
-                <p style="font-size: 0.8rem; margin-top: 10px; color:#f0f0f0;">
-                  © 2025 <strong>Héctor Alejandro Gaviria Marín</strong>. Todos los derechos reservados.
-                </p>
-              </div>
-            </footer>
-          <!-- Estilos del brillo (puedes mover esto al <head> si prefieres) -->
-          <style>
-          @keyframes brillo {
-            0%, 100% {
-              text-shadow: 0 0 6px #ffd700, 0 0 12px #ffd700, 0 0 18px #ffd700;
-            }
-            50% {
-              text-shadow: 0 0 12px #ffeb3b, 0 0 24px #ffeb3b, 0 0 36px #ffeb3b;
-            }
-          }
-          .candado {
-            animation: brillo 1.6s ease-in-out infinite;
-            display: inline-block; /* para que el scale funcione bien */
-          }
-          @media (prefers-reduced-motion: reduce) {
-            .candado { animation: none; }
-          }
-          </style>
-          
-          <!-- Script para abrir/cerrar + pequeño zoom en cada cambio -->
-          <script>
-            const candado = document.getElementById("candado");
-            let cerrado = true;
-          
-            setInterval(() => {
-              // zoom suave de aviso
-              candado.style.transition = "transform 200ms ease";
-              candado.style.transform = "scale(1.2)";
-          
-              setTimeout(() => {
-                candado.textContent = cerrado ? "🔓" : "🔒";
-                candado.style.transform = "scale(1)";
-                cerrado = !cerrado;
-              }, 200);
-            }, 1500);
-          </script>  
+    <!-- Pie de página -->
+<footer style="background: linear-gradient(90deg, #ff7f00, #d35400, #ff7f00); padding: 25px 15px; margin-top: 40px; color: #fff; text-align:center;">
+  <div style="max-width: 700px; margin: 0 auto; font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;">
+    
+    <!-- Línea dorada -->
+    <div style="height: 2px; background: linear-gradient(90deg, #f0c674, #ffdb58, #f0c674); margin-bottom: 10px;"></div>
+    
+    <!-- Título con candado animado -->
+    <h3 style="color: #ffd700; font-size: 1rem; display: flex; align-items: center; justify-content: center; gap: 8px; margin: 0;">
+      <span id="candado" class="candado" style="font-size: 1.6rem;">🔒</span>
+      Derechos de Autor
+    </h3>
+
+    <!-- Texto -->
+    <p style="font-size: 0.9rem; line-height: 1.5; margin-top: 10px;">
+      Este portafolio ha sido desarrollado por <strong>Héctor Alejandro Gaviria Marín</strong> con fines exclusivamente profesionales.
+    </p>
+    <p style="margin-top: 10px; font-size: 0.85rem; line-height: 1.5;">
+      Todos los proyectos, textos y diseños presentados en este sitio web son de autoría propia.  
+      Queda estrictamente prohibida su copia, modificación o distribución sin previa autorización escrita.
+    </p>
+
+    <!-- Línea final -->
+    <p style="margin-top: 15px; text-align: center; font-size: 0.8rem; color: #f8f8f8;">
+      © 2025 <strong style="color: #ffd700;">Héctor Alejandro Gaviria Marín</strong>. Todos los derechos reservados.
+    </p>
+  </div>
+</footer>
+
+<!-- Estilos del brillo -->
+<style>
+@keyframes brillo {
+  0%, 100% {
+    text-shadow: 0 0 6px #ffd700, 0 0 12px #ffd700, 0 0 18px #ffd700;
+  }
+  50% {
+    text-shadow: 0 0 12px #ffeb3b, 0 0 24px #ffeb3b, 0 0 36px #ffeb3b;
+  }
+}
+.candado {
+  animation: brillo 1.6s ease-in-out infinite;
+  display: inline-block;
+}
+@media (prefers-reduced-motion: reduce) {
+  .candado { animation: none; }
+}
+</style>
+
+<!-- Script para animar el candado -->
+<script>
+  const candado = document.getElementById("candado");
+  let cerrado = true;
+
+  setInterval(() => {
+    candado.style.transition = "transform 200ms ease";
+    candado.style.transform = "scale(1.2)";
+    setTimeout(() => {
+      candado.textContent = cerrado ? "🔓" : "🔒";
+      candado.style.transform = "scale(1)";
+      cerrado = !cerrado;
+    }, 200);
+  }, 1500);
+</script>
 </body>
 </html>
