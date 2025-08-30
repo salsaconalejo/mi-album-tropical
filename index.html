@@ -9,12 +9,12 @@
   <link href="https://fonts.googleapis.com/css2?family=Anton&display=swap" rel="stylesheet">
   <title>🎶 Mi Álbum Tropical 🌴</title>
   <style>
-    /* Fondo con gradiente naranja resplandeciente */
+    /* Fondo con gradiente naranja suave */
     body {
       background: linear-gradient(45deg, #FF7F00, #FF4500, #FF6347);
       background-size: 400% 400%;
       animation: gradientAnimation 5s ease infinite;
-      color: white;
+      color: #f5f5f5;  /* Color de texto más suave */
       font-family: 'Roboto', sans-serif;
       text-align: center;
       margin: 0;
@@ -41,17 +41,19 @@
 
     .encabezado-musical h1 {
       color: gold;
-      font-size: 2rem;
+      font-size: 2.5rem;
       margin: 10px 0;
+      font-family: 'Lobster', cursive;  /* Tipografía estilizada */
     }
 
     /* Mensaje de bienvenida */
     .bienvenida {
-      font-size: 1.2rem;
+      font-size: 1.4rem;
       color: #fff;
       font-weight: bold;
       margin-top: 20px;
       animation: fadein 3s ease-in-out infinite alternate;
+      text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.6);
     }
 
     @keyframes fadein {
@@ -64,19 +66,21 @@
     }
 
     .categoria h2 {
-      color: orange;
+      color: #ffeb3b;  /* Color amarillo suave */
+      font-family: 'Lobster', cursive;  /* Tipografía elegante */
+      font-size: 2rem;
     }
 
     /* Estilo para la tabla */
     .table-wrapper {
       overflow-x: auto;
       -webkit-overflow-scrolling: touch;
+      margin-top: 30px;
     }
 
     table {
       border-collapse: collapse;
       width: 100%;
-      margin-top: 15px;
     }
 
     table th, table td {
@@ -86,14 +90,14 @@
     }
 
     table th {
-      background-color: #1b1b1b;
-      color: gold;
+      background-color: #333;
+      color: #fff;
       font-weight: 700;
       letter-spacing: .2px;
     }
 
     /* Hover sutil */
-    table tr:hover td { background: #171717; }
+    table tr:hover td { background: #222; }
 
     /* Anchos de columnas */
     table th:nth-child(1), table td:nth-child(1) { width: 40%; }
@@ -111,25 +115,16 @@
       font-size: 14px;
       line-height: 1;
       border-radius: 6px;
+      padding: 6px 10px;
+      background-color: #FF6347;  /* Naranja suave */
+      color: #fff;
+      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
     }
 
     .youtube-btn i {
-      color: red;
+      color: white;
       font-size: 16px;
       transform: translateY(1px);
-    }
-
-    .youtube-btn .you {
-      color: white;
-      background-color: transparent;
-      padding: 4px 3px;
-    }
-
-    .youtube-btn .tube {
-      color: white;
-      background-color: red;
-      padding: 4px 7px;
-      border-radius: 4px;
     }
 
     .youtube-btn:hover { opacity: 0.85; }
